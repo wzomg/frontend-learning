@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>v-for使用过程添加key</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 将元素和key一一对应起来，当向数组中插入元素时可以复用组件，提高性能 -->
+      <ul>
+        <li v-for="item in letters" :key="item">{{item}}</li>
+      </ul>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          letters: ['A', 'B', 'C', 'D', 'E']
+        }
+      })
+    </script>
+  </body>
+</html>

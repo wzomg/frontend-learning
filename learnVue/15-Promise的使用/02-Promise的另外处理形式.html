@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Promise的另外处理形式</title>
+  </head>
+  <body>
+    <script>
+      /* 简写形式 */
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // resolve('Hello Vuejs')
+          reject('error message')
+        }, 1000)
+      }).then(data => {
+        console.log(data);
+      }, err => {
+        console.log(err);
+      })
+    </script>
+  </body>
+</html>

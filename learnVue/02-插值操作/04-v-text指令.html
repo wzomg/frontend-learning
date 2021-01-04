@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>v-text</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{ message }}张三</h2>
+      <!-- 这个指令不灵活，这样用 会直接覆盖标签的值 -->
+      <!-- v-text 一般接受一个 string 类型 -->
+      <h2 v-text="message">张三</h2>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message: '你好啊！',
+        }
+      })
+    </script>
+  </body>
+</html>

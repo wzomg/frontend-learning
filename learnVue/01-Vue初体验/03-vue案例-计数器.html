@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>当前计数：{{ cnt }}</h2>
+      <!--<button v-on:click="cnt++">+</button>
+      <button v-on:click="cnt&#45;&#45;">-</button>-->
+      <button v-on:click="add">+</button>
+      <button v-on:click="sub">-</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+      // 语法糖：简写代码 v-on:click => @click
+      const app = new Vue({
+        el: '#app',
+        data: {
+          cnt: 0
+        },
+        methods: {
+          add: function () {
+            this.cnt++;
+            console.log('add 被执行！');
+          },
+          sub: function () {
+            this.cnt--;
+            console.log('sub 被执行！');
+          }
+        }
+      })
+      // 1、拿 button 元素
+      // 2、添加监听事件
+    </script>
+  </body>
+</html>
